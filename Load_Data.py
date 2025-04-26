@@ -17,7 +17,7 @@ def load_US_macro(your_path):
     return macro_df
 
 
-# load the data with 36 independent variables
+# load the data with 36 independent variables. Each variable is rank-normalized, as in GKX's paper
 # split the data into training, validation, and testing sets based on the start and end years of the market
 # return the data, start year, training split, validation split, end year, and batch size
 def load_data(your_path, market):
@@ -102,6 +102,7 @@ def load_raw_data(your_path, market):
         raw_data.rename(columns=Others_columns_dic, inplace=True)
         raw_data['DATE'] = pd.to_datetime(raw_data['DATE'], format='%Ym%m')
 
+    raw_data['TARGET'] = raw_data['TARGET'].astype(float) * 100 # return in percentage
     raw_data = raw_data[variables]
     raw_data = raw_data.replace([np.inf, -np.inf], np.nan)
 
