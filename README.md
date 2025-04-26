@@ -1,49 +1,72 @@
-# Alpha Go Everywhere: Machine Learning and International Stock Returns
+# <span style="color: #ff4500">🚀 Alpha Go Everywhere: Machine Learning and International Stock Returns 🚀</span>
 
-This is the README file for the project Alpha Go Everywhere: Machine Learning and International Stock Returns (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489679) accepted by Review of Asset Pricing Studies. It provides an overview of the project structure and instructions on how to use and contribute to the codebase.
+This is the README file for the project **Alpha Go Everywhere: Machine Learning and International Stock Returns** ([SSRN link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489679)) accepted by *Review of Asset Pricing Studies*. It provides an overview of the project structure and instructions on how to use and contribute to the codebase.
 
-## Table of Contents
+---
+
+## 📑 Table of Contents
 
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Data](#data)
 - [Computing Environment](#computing-environment)
 
-## Project Structure
+---
 
-The project is organized as follows:
+## 🏗️ Project Structure
 
-- `Load_Data.py`: Necessary functions for loading or preprocessing data
-- `SetUp.py`: Variables names
-- `Local{US}_Factor{GapQ}.py`: Create Local{US} factor{GapQ}
-- `Merge_Factor+GapQ.py`: Merge US factors, US gaps, and local factors
-- `International_Pool.py`: Intergrate all standardlised market data into one international data
-- `ML{NN}_Market.py`: Train various ML{NN} models for each market
-- `ML{NN}_Market_USmodel.py`: Predict the international markets using the USA model, No further training.
-- `ML{NN}_Market_Enhanced.py`: Train market-specific models enhanced by the USA factors, USA characteristics gaps, and local factors, as additional features.
+The project is organized as follows (**key scripts** highlighted):
 
+- ❗️ `<span style="background-color: #ffff00">Rank_Norm.py</span>`: Rank-normalize the data, like GKX's paper.  
+- 📂 `Load_Data.py`: Necessary functions for loading or preprocessing data  
+- ⚙️ `SetUp.py`: Variable definitions  
+- 🛠️ `Local{US}_Factor{GapQ}.py`: Create Local{US} factor{GapQ}  
+- 🔗 `Merge_Factor+GapQ.py`: Merge US factors, US gaps, and local factors  
+- 🌐 `International_Pool.py`: Integrate all standardized market data into one dataset  
+- 🤖 `ML{NN}_Market.py`: Train various ML{NN} models for each market  
+- 🗽 `ML{NN}_Market_USmodel.py`: Predict international markets using the USA model (no further training)  
+- 🚀 `ML{NN}_Market_Enhanced.py`: Train enhanced market-specific models with USA factors, gaps, and local features  
 
-## Usage
+---
+
+## 🚀 Usage
 
 To use the project, follow these steps:
 
-1. Run Rank_Norm.py to rank-normalize the data, like GKX's paper.
-1. Run Local{US}_Factor{GapQ}.py to create Local{US} factor{GapQ}.
-2. Run Merge_Factor+GapQ.py to merge US factors, US gaps, and local factors.
-3. Run International_Pool.py to integrate all standardlised market data into one international data.
-4. Run ML{NN}_Market.py to train various ML{NN} models for each market.
-5. Run ML{NN}_Market_USmodel.py to predict the international markets using the USA model. 
-6. Run ML{NN}_Market_Enhanced.py to train market-specific models enhanced by the USA factors, USA characteristics gaps, and local factors, as additional features.
+1. **Run** `<span style="background-color: #ffff00">Rank_Norm.py</span>` to rank-normalize the predictors (as in GKX’s paper).  
+2. **Run** `Local{US}_Factor{GapQ}.py` to create Local{US} factor{GapQ}.  
+3. **Run** `Merge_Factor+GapQ.py` to merge US factors, gaps, and local factors.  
+4. **Run** `International_Pool.py` to integrate all standardized market data into one international dataset.  
+5. **Run** `ML{NN}_Market.py` to train ML models for each market.  
+6. **Run** `ML{NN}_Market_USmodel.py` to predict international markets using the USA model.  
+7. **Run** `ML{NN}_Market_Enhanced.py` to train enhanced models with additional features.  
 
-## Data
-US data from CRSP and China data from CSMAR, Other markets data from DataStream.
+---
 
-## Computing Environment
-To run the reproducibility check, the following computing environment and package(s) are required:
-- Environment: These experiments were conducted on a system equipped with an Nvidia A100 GPU with 40 GB of GPU memory, an AMD EPYC 7713 64-Core Processor @ 1.80GHz with 128 cores, and 1.0TB of RAM, running Ubuntu 20.04.4 LTS. 
+## 🗄️ Data
 
-- Package(s): 
-    - Python 3.8.18
-    - PyTorch 2.0.1+cu117
-    - numpy 1.22.3
-    - pandas 2.0.3
+- **US data** from **CRSP**  
+- **China data** from **CSMAR**  
+- **Other markets** data from **DataStream**  
+
+---
+
+## 💻 Computing Environment
+
+To run the reproducibility checks, the following environment and packages are **required**:
+
+- **Hardware**  
+  - Nvidia A100 GPU (40 GB)  
+  - AMD EPYC 7713 64-Core @ 1.80 GHz (128 cores)  
+  - 1.0 TB RAM  
+  - Ubuntu 20.04.4 LTS  
+
+- **Software**  
+  - 🐍 Python 3.8.18  
+  - 🔥 PyTorch 2.0.1+cu117  
+  - 📊 numpy 1.22.3  
+  - 📑 pandas 2.0.3  
+
+---
+
+**Happy coding!** 🎉  
